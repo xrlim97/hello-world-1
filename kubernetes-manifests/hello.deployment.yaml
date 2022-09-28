@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: simple-deployment
+ labels:
+   app: hello-world-1
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+     app: hello-world-1
+ template:
+   metadata:
+     labels:
+       app: hello-world-1
+   spec:
+     containers:
+     - name: fastapi
+       image: docker hub xrlim/hello-world-1:latest
+       ports:
+       - containerPort: 8500
