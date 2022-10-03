@@ -38,7 +38,7 @@ pipeline:
               type: KubernetesGcp
               spec:
                 connectorRef: org.GCP_Org
-                cluster: cluster-2
+                cluster: asia-east2-a/cluster-2
                 namespace: harness-delegate-ng
                 releaseName: release-<+INFRA_KEY>
             allowSimultaneousDeployments: false
